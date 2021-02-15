@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
                   Container(),
                   Container(),
                   Container(),
-                  Container()
+                  Container(),
                 ],
               ),
               bottomNavigationBar: Bottom(),
