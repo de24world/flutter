@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone_test/widget/bottom_bar.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,6 +8,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  TabController controller;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,14 +17,16 @@ class _MyAppState extends State<MyApp> {
         home: DefaultTabController(
             length: 4,
             child: Scaffold(
-                body: TabBarVeiw(physics: NeverScrollableScrollPhysics(), children: <Widget>[
-              Container(),
-              Container(),
-              Container(),
-              Container()
-            ],
-            ),
-            bottomNavigationBar: BottomBar(),
+              body: TabBarVeiw(
+                physics: NeverScrollableScrollPhysics(),
+                children: <Widget>[
+                  Container(),
+                  Container(),
+                  Container(),
+                  Container()
+                ],
+              ),
+              bottomNavigationBar: Bottom(),
             )));
   }
 }
